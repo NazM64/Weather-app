@@ -1,0 +1,77 @@
+.box {
+  background-color: #fafafa;
+  border: 5px solid gray;
+  width: 830px;
+  height: 430px;
+  margin: auto;
+  margin-top: 70px;
+  padding-left: 50px;
+  padding-top: 20px;
+}
+
+h3,
+h4 {
+  position: relative;
+  top: -100px;
+  right: -630px;
+  color: #272343;
+}
+.today-high-temp,
+.today-low-temp {
+  position: relative;
+  top: -78px;
+  font-size: 15px;
+}
+#celsius-link-high,
+#fahrenheit-link-high,
+#celsius-link-low,
+#fahrenheit-link-low {
+  text-decoration: none;
+}
+#celsius-link-high:hover,
+#fahrenheit-link-high:hover,
+#celsius-link-low:hover,
+#fahrenheit-link-low:hover {
+  text-decoration: underline;
+}
+.row {
+  position: relative;
+  top: -50px;
+}
+.icon {
+  font-size: 30px;
+}
+.icon .fa-sun {
+  color: yellow;
+}
+.icon .fa-cloud-sun {
+  color: #bbe4e9;
+}
+.fa-cloud-rain {
+  color: #79c2d0;
+}
+.icon .fa-cloud {
+  color: gray;
+}
+.icon .fa-snowflake {
+  color: #79c2d0;
+}
+.day {
+  font-weight: bold;
+}
+#search-form {
+  position: relative;
+  top: -10px;
+}
+.button {
+  border-color: #79c2d0;
+}
+#city-input {
+  border-radius: 30px;
+  border: 3px solid #79c2d0;
+}
+.current-button {
+  background-color: #66bfbf;
+  border-color: #79c2d0;
+  margin-left: 20px;
+}
