@@ -9,17 +9,17 @@
   padding-top: 20px;
 }
 
-h3,
-h4 {
+#date-time {
+  font-size: 15px;
   position: relative;
   top: -100px;
-  right: -630px;
+  right: -500px;
   color: #272343;
 }
 .today-high-temp,
 .today-low-temp {
   position: relative;
-  top: -78px;
+  top: -10px;
   font-size: 15px;
 }
 #celsius-link-high,
@@ -36,7 +36,7 @@ h4 {
 }
 .row {
   position: relative;
-  top: -50px;
+  top: 20px;
 }
 .icon {
   font-size: 30px;
@@ -61,7 +61,7 @@ h4 {
 }
 #search-form {
   position: relative;
-  top: -10px;
+  top: 70px;
 }
 .button {
   border-color: #79c2d0;

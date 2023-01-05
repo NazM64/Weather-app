@@ -1,28 +1,29 @@
-let date = new Date();
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let day = days[date.getDay()];
-let h3 = document.querySelector("h3");
-h3.innerHTML = `${day}`;
-let hours = date.getHours();
-if (hours < 10) {
-  hours = `0${hours}`;
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `Last updated:${day} ${hours}:${minutes}`;
 }
-let minutes = date.getMinutes();
-if (minutes < 10) {
-  minutes = `0${minutes}`;
-}
-let h4 = document.querySelector("h4");
-h4.innerHTML = `${hours} : ${minutes}`;
 
 function showTemperature(response) {
+  let h3 = document.querySelector("#date-time");
+  h3.innerHTML = formatDate(response.data.dt * 1000);
   let city = response.data.name;
   let h1 = document.querySelector("h1");
   h1.innerHTML = `${city}`;
