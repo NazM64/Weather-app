@@ -22,6 +22,7 @@ function formatDate(timestamp) {
 }
 
 function showTemperature(response) {
+  console.log(response.data);
   let h3 = document.querySelector("#date-time");
   h3.innerHTML = formatDate(response.data.dt * 1000);
   let city = response.data.name;
@@ -36,6 +37,11 @@ function showTemperature(response) {
   let minTemperature = Math.round(response.data.main.temp_min);
   let lowDegree = document.querySelector(".low-degree");
   lowDegree.innerHTML = `${minTemperature}`;
+  let iconElement = document.querySelector("#icon-top");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function findCity(city) {
