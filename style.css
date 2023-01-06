@@ -28,12 +28,7 @@
 #fahrenheit-link-low {
   text-decoration: none;
 }
-#celsius-link-high:hover,
-#fahrenheit-link-high:hover,
-#celsius-link-low:hover,
-#fahrenheit-link-low:hover {
-  text-decoration: underline;
-}
+
 .row {
   position: relative;
   top: 20px;
@@ -81,4 +76,20 @@
 p {
   margin-left: 270px;
   font-size: 13px;
+}
+
+.today-high-temp .active {
+  color: black;
+  cursor: default;
+}
+.today-low-temp .active {
+  color: black;
+  cursor: default;
+}
+
+.today-high-temp .active:hover {
+  text-decoration: none;
+}
+.today-low-temp .active:hover {
+  text-decoration: none;
 }

@@ -52,6 +52,8 @@ let lowCelsiusTemperature = null;
 function highTempFahrenheit(event) {
   event.preventDefault();
   let highFahrenheitDegree = document.querySelector(".high-degree");
+  highTemperatureFahrenheit.classList.add("active");
+  highTemperatureCelsius.classList.remove("active");
   let highTempFahrenheit = (highCelsiusTemperature * 9) / 5 + 32;
   highFahrenheitDegree.innerHTML = Math.round(highTempFahrenheit);
 }
@@ -62,12 +64,36 @@ highTemperatureFahrenheit.addEventListener("click", highTempFahrenheit);
 function lowTempFahrenheit(event) {
   event.preventDefault();
   let lowFahrenheitDegree = document.querySelector(".low-degree");
+  lowTemperatureFahrenheit.classList.add("active");
+  lowTemperatureCelsius.classList.remove("active");
   let lowTempFahrenheit = (lowCelsiusTemperature * 9) / 5 + 32;
   lowFahrenheitDegree.innerHTML = Math.round(lowTempFahrenheit);
 }
 
 let lowTemperatureFahrenheit = document.querySelector("#fahrenheit-link-low");
 lowTemperatureFahrenheit.addEventListener("click", lowTempFahrenheit);
+
+function highTempCelsius(event) {
+  event.preventDefault();
+  let highCelsiusDegree = document.querySelector(".high-degree");
+  highTemperatureFahrenheit.classList.remove("active");
+  highTemperatureCelsius.classList.add("active");
+  highCelsiusDegree.innerHTML = Math.round(highCelsiusTemperature);
+}
+
+let highTemperatureCelsius = document.querySelector("#celsius-link-high");
+highTemperatureCelsius.addEventListener("click", highTempCelsius);
+
+function lowTempCelsius(event) {
+  event.preventDefault();
+  let lowCelsiusDegree = document.querySelector(".low-degree");
+  lowTemperatureFahrenheit.classList.remove("active");
+  lowTemperatureCelsius.classList.add("active");
+  lowCelsiusDegree.innerHTML = Math.round(lowCelsiusTemperature);
+}
+
+let lowTemperatureCelsius = document.querySelector("#celsius-link-low");
+lowTemperatureCelsius.addEventListener("click", lowTempCelsius);
 
 function findCity(city) {
   let apiKey = "ecf6996c8a62ee385547d2ae6dc3dea8";
