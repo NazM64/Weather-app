@@ -31,18 +31,43 @@ function showTemperature(response) {
   let weatherDescription = response.data.weather[0].description;
   let h2 = document.querySelector("h2");
   h2.innerHTML = `${weatherDescription}`;
-  let temperature = Math.round(response.data.main.temp);
-  let highDegree = document.querySelector(".high-degree");
-  highDegree.innerHTML = `${temperature}`;
-  let minTemperature = Math.round(response.data.main.temp_min);
-  let lowDegree = document.querySelector(".low-degree");
-  lowDegree.innerHTML = `${minTemperature}`;
+
+  highCelsiusTemperature = response.data.main.temp;
+  lowCelsiusTemperature = response.data.main.temp_min;
+
+  let highFahrenheitDegree = document.querySelector(".high-degree");
+  highFahrenheitDegree.innerHTML = Math.round(highCelsiusTemperature);
+  let lowFahrenheitDegree = document.querySelector(".low-degree");
+  lowFahrenheitDegree.innerHTML = Math.round(lowCelsiusTemperature);
   let iconElement = document.querySelector("#icon-top");
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 }
+
+let highCelsiusTemperature = null;
+let lowCelsiusTemperature = null;
+
+function highTempFahrenheit(event) {
+  event.preventDefault();
+  let highFahrenheitDegree = document.querySelector(".high-degree");
+  let highTempFahrenheit = (highCelsiusTemperature * 9) / 5 + 32;
+  highFahrenheitDegree.innerHTML = Math.round(highTempFahrenheit);
+}
+
+let highTemperatureFahrenheit = document.querySelector("#fahrenheit-link-high");
+highTemperatureFahrenheit.addEventListener("click", highTempFahrenheit);
+
+function lowTempFahrenheit(event) {
+  event.preventDefault();
+  let lowFahrenheitDegree = document.querySelector(".low-degree");
+  let lowTempFahrenheit = (lowCelsiusTemperature * 9) / 5 + 32;
+  lowFahrenheitDegree.innerHTML = Math.round(lowTempFahrenheit);
+}
+
+let lowTemperatureFahrenheit = document.querySelector("#fahrenheit-link-low");
+lowTemperatureFahrenheit.addEventListener("click", lowTempFahrenheit);
 
 function findCity(city) {
   let apiKey = "ecf6996c8a62ee385547d2ae6dc3dea8";
