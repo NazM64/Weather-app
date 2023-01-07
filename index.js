@@ -29,7 +29,7 @@ function showTemperature(response) {
   let h1 = document.querySelector("h1");
   h1.innerHTML = `${city}`;
   let weatherDescription = response.data.weather[0].description;
-  let h2 = document.querySelector("h2");
+  let h2 = document.querySelector("#weather-description");
   h2.innerHTML = `${weatherDescription}`;
 
   highCelsiusTemperature = response.data.main.temp;
