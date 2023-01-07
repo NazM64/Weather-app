@@ -25,6 +25,7 @@
     <title>SheCodes Plus-Homework-Week5</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <div class="container">
       <div class="box">
@@ -37,28 +38,34 @@
             </ul>
           </div>
 
-          <div class="col-4">
+          <div class="col-4 d-flex align-items-center">
             <img
               src="http://openweathermap.org/img/wn/09d@2x.png"
               id="icon-top"
             />
 
-            H:<span class="high-degree">6</span>
-            <span class="today-high-temp">
-              <a href="#" id="celsius-link-high" class="active">°C</a>|<a
-                href="#"
-                id="fahrenheit-link-high"
-                >°F</a
-              >
-            </span>
-            L:<span class="low-degree">1</span>
-            <span class="today-low-temp"
-              ><a href="#" id="celsius-link-low" class="active">°C</a>|<a
-                href="#"
-                id="fahrenheit-link-low"
-                >°F</a
-              >
-            </span>
+            <div class="d-flex flex-column d-flex align-items-center">
+              <div>
+                H:<span class="high-degree">6</span>
+                <span class="today-high-temp">
+                  <a href="#" id="celsius-link-high" class="active">°C</a>|<a
+                    href="#"
+                    id="fahrenheit-link-high"
+                    >°F</a
+                  >
+                </span>
+              </div>
+              <div>
+                L:<span class="low-degree">1</span>
+                <span class="today-low-temp"
+                  ><a href="#" id="celsius-link-low" class="active">°C</a>|<a
+                    href="#"
+                    id="fahrenheit-link-low"
+                    >°F</a
+                  >
+                </span>
+              </div>
+            </div>
           </div>
         </div>
 
