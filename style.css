@@ -9,11 +9,6 @@
   padding-top: 20px;
 }
 
-.justify-content-between {
-  position: relative;
-  top: 60px;
-}
-
 ul {
   list-style: none;
   margin: 0;
@@ -29,7 +24,7 @@ ul {
 
 .row {
   position: relative;
-  top: -40px;
+  top: 15px;
 }
 .icon {
   font-size: 30px;
@@ -54,7 +49,7 @@ ul {
 }
 #search-form {
   position: relative;
-  top: 10px;
+  top: 80px;
 }
 .button {
   border-color: #79c2d0;
