@@ -46,6 +46,35 @@ function showTemperature(response) {
   );
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+              <img
+                src="http://openweathermap.org/img/wn/09d@2x.png"
+                width="70"
+              />
+
+              <div class="weather-forecast-days">${day}</div>
+              <div>
+                H:
+                <span class="high-temp">5°</span>
+              </div>
+
+              <div>
+                L:
+                <span class="low-temp">1°</span>
+              </div>
+            </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 let highCelsiusTemperature = null;
 let lowCelsiusTemperature = null;
 
@@ -100,6 +129,8 @@ function findCity(city) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
   axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemperature);
 }
+
+displayForecast();
 
 function searchCity(event) {
   event.preventDefault();
