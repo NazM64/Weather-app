@@ -21,35 +21,21 @@ ul {
 #fahrenheit-link-low {
   text-decoration: none;
 }
-
-.row {
-  position: relative;
-  top: 15px;
+.weather-forecast {
+  margin-top: 40px;
+  text-align: center;
+  color: #000;
 }
-.icon {
-  font-size: 30px;
+.weather-forecast-days {
+  font-size: 16px;
+  opacity: 0.7;
 }
-.icon .fa-sun {
-  color: yellow;
-}
-.icon .fa-cloud-sun {
-  color: #bbe4e9;
-}
-.fa-cloud-rain {
-  color: #79c2d0;
-}
-.icon .fa-cloud {
-  color: gray;
-}
-.icon .fa-snowflake {
-  color: #79c2d0;
-}
-.day {
-  font-weight: bold;
+.low-temp {
+  opacity: 0.5;
 }
 #search-form {
   position: relative;
-  top: 80px;
+  top: 40px;
 }
 .button {
   border-color: #79c2d0;
