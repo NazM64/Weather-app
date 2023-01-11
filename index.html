@@ -29,69 +29,73 @@
   <body>
     <div class="container">
       <div class="box">
-        <div class="row justify-content-between">
-          <div class="col-4">
-            <h1>Vancouver</h1>
-            <ul class="left">
-              <li id="date-time">Friday 9:00</li>
-              <li id="weather-description">Showers</li>
-            </ul>
-          </div>
+        <div class="weather-app">
+          <div class="row justify-content-between">
+            <div class="col-4">
+              <h1>Vancouver</h1>
+              <ul class="left">
+                <li id="date-time">Friday 9:00</li>
+                <li id="weather-description">Showers</li>
+                <li>Wind: <span id="wind"></span> km/h</li>
+                <li>Humidity: <span id="humidity"></span>%</li>
+              </ul>
+            </div>
 
-          <div class="col-4 d-flex align-items-center">
-            <img
-              src="http://openweathermap.org/img/wn/09d@2x.png"
-              id="icon-top"
-            />
+            <div class="col-4 d-flex align-items-center">
+              <img
+                src="http://openweathermap.org/img/wn/09d@2x.png"
+                id="icon-top"
+              />
 
-            <div class="d-flex flex-column d-flex align-items-center">
-              <div>
-                H:<span class="high-degree">6</span>
-                <span class="today-high-temp">
-                  <a href="#" id="celsius-link-high" class="active">°C</a>|<a
-                    href="#"
-                    id="fahrenheit-link-high"
-                    >°F</a
-                  >
-                </span>
-              </div>
-              <div>
-                L:<span class="low-degree">1</span>
-                <span class="today-low-temp"
-                  ><a href="#" id="celsius-link-low" class="active">°C</a>|<a
-                    href="#"
-                    id="fahrenheit-link-low"
-                    >°F</a
-                  >
-                </span>
+              <div class="d-flex flex-column d-flex align-items-center">
+                <div>
+                  H:<span class="high-degree">6</span>
+                  <span class="today-high-temp">
+                    <a href="#" id="celsius-link-high" class="active">°C</a>|<a
+                      href="#"
+                      id="fahrenheit-link-high"
+                      >°F</a
+                    >
+                  </span>
+                </div>
+                <div>
+                  L:<span class="low-degree">1</span>
+                  <span class="today-low-temp"
+                    ><a href="#" id="celsius-link-low" class="active">°C</a>|<a
+                      href="#"
+                      id="fahrenheit-link-low"
+                      >°F</a
+                    >
+                  </span>
+                </div>
               </div>
             </div>
           </div>
+
+          <div class="weather-forecast" id="forecast"></div>
+
+          <form id="search-form">
+            <input
+              type="text"
+              id="city-input"
+              placeholder="Type the city name"
+              autocomplete="off"
+            />
+            <input type="submit" value="Search" class="button" />
+            <input type="submit" value="Current" class="current-button" />
+          </form>
         </div>
-
-        <div class="weather-forecast" id="forecast"></div>
-
-        <form id="search-form">
-          <input
-            type="text"
-            id="city-input"
-            placeholder="Type the city name"
-            autocomplete="off"
-          />
-          <input type="submit" value="Search" class="button" />
-          <input type="submit" value="Current" class="current-button" />
-        </form>
       </div>
+      <p>
+        <a
+          href="https://github.com/NazM64/Weather-app"
+          target="_blank"
+          id="GitHub-link"
+          >Open-Source code</a
+        >
+        by Naz Mir
+      </p>
     </div>
-    <p>
-      <a
-        href="https://github.com/NazM64/Weather-app"
-        target="_blank"
-        id="GitHub-link"
-        >Open-Source code</a
-      >
-      by Naz Mir
-    </p>
     <script src="index.js"></script>
   </body>
 </html>

@@ -94,6 +94,10 @@ function showTemperature(response) {
   let weatherDescription = response.data.weather[0].description;
   let h2 = document.querySelector("#weather-description");
   h2.innerHTML = `${weatherDescription}`;
+  let windElement = document.querySelector("#wind");
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML = response.data.main.humidity;
 
   highCelsiusTemperature = response.data.main.temp;
   lowCelsiusTemperature = response.data.main.temp_min;
